@@ -4,18 +4,26 @@
 Industry: Technology/Marketing
 Developer: Christian Watts
 Completion Date: 05/02/2025
+<<<<<<< HEAD
 GitHub Repository: [Link to your repository]
 Trello Board: [Link to Trello board]
 Live Demo: [https://vercel.com/christain-watts-projects/v0-social-media-dashboard](https://vercel.com/christain-watts-projects/v0-social-media-dashboard)
+=======
+>>>>>>> cf6c07a5534fbb43adbe57808f14027454c4318d
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/christain-watts-projects/v0-social-media-dashboard)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/pGR5omNs5fB)
+## Business Problem
 
+<<<<<<< HEAD
 ## Business Problem
 
 ### Problem Statement
 Marketing teams and social media managers struggle to efficiently track performance across multiple platforms, resulting in time-consuming manual data collection and analysis. Without a centralized dashboard, it's difficult to identify trends, measure campaign success, and make data-driven decisions quickly. This fragmented approach leads to missed opportunities and inefficient resource allocation.
 
+=======
+### Problem Statement
+Marketing teams and social media managers struggle to efficiently track performance across multiple platforms, resulting in time-consuming manual data collection and analysis. Without a centralized dashboard, it's difficult to identify trends, measure campaign success, and make data-driven decisions quickly. This fragmented approach leads to missed opportunities and inefficient resource allocation.
+
+>>>>>>> cf6c07a5534fbb43adbe57808f14027454c4318d
 ### Target Users
 Social media managers, digital marketing professionals, and brand managers who oversee multiple social media accounts across different platforms. These users typically have moderate technical expertise and need quick access to performance metrics, audience insights, and content planning tools to optimize their social media strategy.
 
@@ -192,7 +200,10 @@ cp .env.example .env.local
 # Run development server
 npm run dev
 ```
+<<<<<<< HEAD
 
 ---
 
 *Note: This project was initially generated with [v0.dev](https://v0.dev/chat/projects/pGR5omNs5fB) and has been further developed and customized.*
+=======
+>>>>>>> cf6c07a5534fbb43adbe57808f14027454c4318d
