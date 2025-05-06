@@ -148,8 +148,11 @@ const topPosts = [
   },
 ];
 
+import ErrorBoundary from '@/components/ErrorBoundary';
+
 export default function Dashboard() {
   return (
+    <ErrorBoundary>
     <DashboardLayout>
       <DashboardHeader 
         title="Dashboard Overview" 
@@ -322,5 +325,6 @@ export default function Dashboard() {
         </div>
       </div>
     </DashboardLayout>
+    </ErrorBoundary>
   );
 }
