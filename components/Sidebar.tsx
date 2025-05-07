@@ -69,9 +69,9 @@ export default function Sidebar() {
   ];
 
   return (
-    <div className="h-full flex flex-col bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800">
-      <div className="p-4 border-b border-gray-200 dark:border-gray-800">
-        <h2 className="text-xl font-bold text-primary-700 dark:text-primary-400">Social Media Dashboard</h2>
+    <div className="h-full flex flex-col bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 shadow-sm">
+      <div className="p-4 border-b border-gray-200 dark:border-gray-700">
+        <h2 className="text-xl font-bold text-primary-700 dark:text-primary-300">Social Media Dashboard</h2>
       </div>
       <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
         {navigation.map((item) => {
@@ -82,8 +82,8 @@ export default function Sidebar() {
               href={item.href}
               className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${
                 isActive
-                  ? 'bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-200'
-                  : 'text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
+                  ? 'bg-primary-100 text-primary-700 dark:bg-primary-800 dark:text-primary-200 shadow-sm'
+                  : 'text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700 hover:shadow-sm'
               }`}
             >
               <span className="mr-3">{item.icon}</span>
@@ -92,7 +92,7 @@ export default function Sidebar() {
           );
         })}
       </nav>
-      <div className="p-4 border-t border-gray-200 dark:border-gray-800">
+      <div className="p-4 border-t border-gray-200 dark:border-gray-700">
         <div className="flex items-center">
           <div className="flex-shrink-0">
             <img
@@ -102,8 +102,8 @@ export default function Sidebar() {
             />
           </div>
           <div className="ml-3">
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-200">Jane Smith</p>
-            <p className="text-xs text-gray-500 dark:text-gray-400">Marketing Manager</p>
+            <p className="text-sm font-medium text-gray-800 dark:text-gray-100">Jane Smith</p>
+            <p className="text-xs text-gray-600 dark:text-gray-300">Marketing Manager</p>
           </div>
         </div>
       </div>

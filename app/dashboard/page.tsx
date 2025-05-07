@@ -5,6 +5,7 @@ import DashboardHeader from '@/components/DashboardHeader';
 import StatCard from '@/components/StatCard';
 import EngagementChart from '@/components/EngagementChart';
 import { format, subDays } from 'date-fns';
+import { useState, useEffect } from 'react';
 
 // Dummy data for the dashboard
 const stats = [
@@ -99,23 +100,25 @@ const platformStats = [
   },
 ];
 
-// Generate dummy chart data for the last 30 days
+// Generate deterministic chart data for the last 30 days
 const generateChartData = () => {
   const data = [];
   for (let i = 30; i >= 0; i--) {
-    const date = subDays(new Date(), i);
+    const date = subDays(new Date('2025-01-01'), i); // Use fixed date to ensure consistency
+    // Use deterministic values based on the day number
     data.push({
       date: format(date, 'MMM dd'),
-      instagram: Math.floor(Math.random() * 1000) + 2000,
-      twitter: Math.floor(Math.random() * 800) + 1500,
-      facebook: Math.floor(Math.random() * 600) + 1000,
-      linkedin: Math.floor(Math.random() * 400) + 500,
+      instagram: 2000 + (i * 13) % 1000, // Deterministic formula
+      twitter: 1500 + (i * 17) % 800,
+      facebook: 1000 + (i * 19) % 600,
+      linkedin: 500 + (i * 23) % 400,
     });
   }
   return data;
 };
 
-const engagementData = generateChartData();
+// Pre-generate data for server rendering
+const preGeneratedData = generateChartData();
 
 // Generate dummy data for top performing posts
 const topPosts = [
@@ -151,6 +154,17 @@ const topPosts = [
 import ErrorBoundary from '@/components/ErrorBoundary';
 
 export default function Dashboard() {
+  // Use state to handle client-side only rendering
+  const [isClient, setIsClient] = useState(false);
+  const [engagementData, setEngagementData] = useState(preGeneratedData);
+  
+  // Set isClient to true when component mounts on the client
+  useEffect(() => {
+    setIsClient(true);
+    // Use the pre-generated data to avoid hydration mismatch
+    setEngagementData(preGeneratedData);
+  }, []);
+  
   return (
     <ErrorBoundary>
     <DashboardLayout>
